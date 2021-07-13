@@ -1,0 +1,14 @@
+_apt
+systemd-timesync
+systemd-network
+systemd-resolve
+messagebus
+sshd
+avahi
+saned
+colord
+hplip
+maildeliverer
+systemd-coredump
+mysql
+mattermost

@@ -1,0 +1,116 @@
+# Nmap 7.91 scan initiated Fri Mar  5 00:02:01 2021 as: nmap -T4 -sV --script vuln -p- -o nmap_script_vuln.txt spectra.htb
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for spectra.htb (10.10.10.229)
+Host is up (0.030s latency).
+Not shown: 65532 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.1 (protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:8.1: 
+|     	CVE-2020-15778	6.8	https://vulners.com/cve/CVE-2020-15778
+|_    	CVE-2020-14145	4.3	https://vulners.com/cve/CVE-2020-14145
+80/tcp   open  http    nginx 1.17.4
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=spectra.htb
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://spectra.htb:80/main/
+|     Form id: search-form-1
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/
+|     Form id: search-form-2
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?cat=1
+|     Form id: search-form-1
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?cat=1
+|     Form id: search-form-2
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/wp-login.php
+|     Form id: loginform
+|     Form action: http://spectra.htb/main/wp-login.php
+|     
+|     Path: http://spectra.htb:80/main/?m=202006
+|     Form id: search-form-1
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?m=202006
+|     Form id: search-form-2
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/
+|     Form id: search-form-1
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/
+|     Form id: search-form-2
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?p=1
+|     Form id: search-form-1
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?p=1
+|     Form id: commentform
+|     Form action: http://spectra.htb/main/wp-comments-post.php
+|     
+|     Path: http://spectra.htb:80/main/?p=1
+|     Form id: search-form-2
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?page_id=2
+|     Form id: search-form-1
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?page_id=2
+|     Form id: search-form-2
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?author=1
+|     Form id: search-form-1
+|     Form action: http://spectra.htb/main/
+|     
+|     Path: http://spectra.htb:80/main/?author=1
+|     Form id: search-form-2
+|_    Form action: http://spectra.htb/main/
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|_  /testing/: Potentially interesting folder w/ directory listing
+|_http-server-header: nginx/1.17.4
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  BID:49303  CVE:CVE-2011-3192
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://seclists.org/fulldisclosure/2011/Aug/175
+|       https://www.securityfocus.com/bid/49303
+|       https://www.tenable.com/plugins/nessus/55976
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+| vulners: 
+|   nginx 1.17.4: 
+|_    	CVE-2019-20372	4.3	https://vulners.com/cve/CVE-2019-20372
+3306/tcp open  mysql   MySQL (unauthorized)
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+|_rsa-vuln-roca: ERROR: Script execution failed (use -d to debug)
+|_ssl-ccs-injection: ERROR: Script execution failed (use -d to debug)
+|_ssl-dh-params: ERROR: Script execution failed (use -d to debug)
+|_ssl-heartbleed: ERROR: Script execution failed (use -d to debug)
+|_ssl-poodle: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: ERROR: Script execution failed (use -d to debug)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar  5 00:07:09 2021 -- 1 IP address (1 host up) scanned in 307.53 seconds

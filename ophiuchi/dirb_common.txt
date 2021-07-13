@@ -1,0 +1,4 @@
+/host-manager (Status: 302)
+/manager (Status: 302)
+/Servlet (Status: 200)
+/test (Status: 302)

@@ -1,0 +1,20 @@
+Host: 10.10.10.214 (time) (linux)
+Ports:
+	22 (SSH) OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+	80 (HTTP) Apache httpd 2.4.41
+
+Website:
+	Got JSON beautifier and validator... CVE with java/json?
+	CVE-2020-17479: The return of Validation Bypass (CVE-2019-19507) in `jpv`
+	Errors:
+		Validation failed: Unhandled Java exception: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'test': was expecting 'null', 'true', 'false' or NaN
+
+
+user:
+5f5109e58ed7d62c97f61a71b0b204c2
+
+root:
+8f20bb67750d3e9c1b53d255fd9eb702
+
+
+https://hackingwebservice.wordpress.com/2020/12/29/htbhackthebox-time-writeup/

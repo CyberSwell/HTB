@@ -1,0 +1,13 @@
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+
+PORT 80: Passage News
+	Implemented Fail2Ban
+		Two minute ban on IP address
+	Can leave name, email, comment, "Remember me" along with "Smiles"
+
+USERS:
+	Kim Swift
+	admin
+	Sid Meier
+	Paul Coles

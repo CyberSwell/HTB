@@ -1,0 +1,16 @@
+nmap:
+Port 80 - Apache httpd 2.4.46 ((Win64) OpenSSL/1.1.1j PHP/7.3.27)
+Port 135 - msrpc
+Port 443 - https(?)
+Port 445 - microsoft-ds
+Port 5985 - http - HTTPAPI httpd 2.0
+Port 6379 - redis?
+Port 7680 - ? 
+mb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+
+atom.htb:80:
+	Heed software - for notetaking
+	

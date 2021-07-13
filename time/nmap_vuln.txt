@@ -1,0 +1,32 @@
+# Nmap 7.91 scan initiated Mon Jan 25 20:12:46 2021 as: nmap -Pn --script vuln -T4 -o nmap_vuln.txt 10.10.10.214
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.10.214
+Host is up (0.018s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.214
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.10.214:80/
+|     Form id: 
+|_    Form action: 
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-fileupload-exploiter: 
+|   
+|     Couldn't find a file-type field.
+|   
+|_    Couldn't find a file-type field.
+| http-internal-ip-disclosure: 
+|_  Internal IP Leaked: 127.0.1.1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+
+# Nmap done at Mon Jan 25 20:13:44 2021 -- 1 IP address (1 host up) scanned in 57.47 seconds

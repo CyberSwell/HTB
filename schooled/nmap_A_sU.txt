@@ -1,0 +1,18 @@
+# Nmap 7.91 scan initiated Tue Apr  6 14:47:34 2021 as: nmap -A -sU -o nmap_A_sU.txt schooled.htb
+Nmap scan report for schooled.htb (10.129.94.203)
+Host is up (0.019s latency).
+All 1000 scanned ports on schooled.htb (10.129.94.203) are closed (905) or open|filtered (95)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: FreeBSD 12.X|13.X
+OS CPE: cpe:/o:freebsd:freebsd:12 cpe:/o:freebsd:freebsd:13
+OS details: FreeBSD 12.0-RELEASE - 13.0-CURRENT
+Network Distance: 2 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   17.85 ms 10.10.14.1
+2   18.00 ms schooled.htb (10.129.94.203)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr  6 14:49:42 2021 -- 1 IP address (1 host up) scanned in 127.44 seconds

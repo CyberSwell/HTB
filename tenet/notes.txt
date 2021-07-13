@@ -1,0 +1,82 @@
+Nmap
+	Port 22
+	Port 80
+	Apparently /wordpress/wp-login.php? Enum?
+		Navigating to 10.10.10.223/wordpress/wp-admin and /wp-admin.php not working
+Port 80: 
+	Default Apache page
+	/wordpress/xmlrpc.php: Doesn't seem to be displaying commands when POST'ing
+	/index.php/2020/12/16/logs/#comment-2
+	/wp-admin/
+	Time management software "Rotas"	
+
+	sator php file
+
+	backup
+
+	Users:
+		"protagonist" (exists)
+		"neil" (exists)
+
+10.10.10.223/sator.php.bak
+	Figure out what the heck the code does, how can we progress/ get webshell?	
+
+10.10.10.223/sator.php
+	PHP Object injection? Pass variable "arepo" in GET request?
+	
+logged in as www-data
+
+/etc/passwd:
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd/netif:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd/resolve:/usr/sbin/nologin
+syslog:x:102:106::/home/syslog:/usr/sbin/nologin
+messagebus:x:103:107::/nonexistent:/usr/sbin/nologin
+_apt:x:104:65534::/nonexistent:/usr/sbin/nologin
+lxd:x:105:65534::/var/lib/lxd/:/bin/false
+uuidd:x:106:110::/run/uuidd:/usr/sbin/nologin
+dnsmasq:x:107:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+landscape:x:108:112::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:109:1::/var/cache/pollinate:/bin/false
+sshd:x:110:65534::/run/sshd:/usr/sbin/nologin
+mysql:x:111:115:MySQL Server,,,:/nonexistent:/bin/false
+neil:x:1001:1001:neil,,,:/home/neil:/bin/bash
+
+Got meterpreter shell
+
+in wp-config.php:
+/** MySQL database username */
+define( 'DB_USER', 'neil' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'Opera2112' );
+
+in /home/neil/user.txt: 5185f3bb88a60dbc0098a8d4bfd00558
+
+/usr/bin/pkexec has SUID 
+Linux kernel 4.15
+
+Searchsploit for linux kernel 4.15:
+Linux Kernel 4.10 < 5.1.17 - 'PTRACE_TRACEME' pkexec Local Privilege Escalation                               | linux/local/47163.c
+
+
+Check neil's "sudo -l"
+key="ssh-rsa AAAAA3NzaG1yc2GAAAAGAQAAAAAAAQG+AMU8OGdqbaPP/Ls7bXOa9jNlNzNOgXiQh6ih2WOhVgGjqr2449ZtsGvSruYibxN+MQLG59VkuLNU4NNiadGry0wT7zpALGg2Gl3A0bQnN13YkL3AA8TlU/ypAuocPVZWOVmNjGlftZG9AP656hL+c9RfqvNLVcvvQvhNNbAvzaGR2XOVOVfxt+AmVLGTlSqgRXi6/NyqdzG5Nkn9L/GZGa9hcwM8+4nT43N6N31lNhx4NeGabNx33b25lqermjA+RGWMvGN8siaGskvgaSbuzaMGV9N8umLp6lNo5fqSpiGN8MQSNsXa3xXG+kplLn2W+pbzbgwTNN/w0p+Urjbl root@ubuntu"
+
+Can we get race condition with enableSSH.sh?
+
+Write our own public key to some ssh file in tmp
+
+SSH in with -i flag as root
+
+root hash: abf40dc2aeffcb736feeef629fb733b8
+
+Things learned:
+-PHP object injection
+-Backups stored as .bak
+-ENUMERATE ENUMERATE ENUMERATE
+-GET BETTER AT ENUMERATION
+-Check yo configs once you get in
+-Check "sudo -l"
+-Race conditions in code!
+

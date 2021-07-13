@@ -1,0 +1,3 @@
+SMB anonymous login, no shares
+
+LDAP MD5

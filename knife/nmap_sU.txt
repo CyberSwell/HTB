@@ -1,0 +1,7 @@
+# Nmap 7.91 scan initiated Wed Jun  2 23:13:22 2021 as: nmap -T5 -sU -o nmap_sU.txt knife.htb
+Warning: 10.10.10.242 giving up on port because retransmission cap hit (2).
+Nmap scan report for knife.htb (10.10.10.242)
+Host is up (0.013s latency).
+All 1000 scanned ports on knife.htb (10.10.10.242) are open|filtered (915) or closed (85)
+
+# Nmap done at Wed Jun  2 23:14:42 2021 -- 1 IP address (1 host up) scanned in 80.29 seconds

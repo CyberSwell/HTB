@@ -1,0 +1,7 @@
+22/tcp    open     ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+80/tcp    open     http    nginx 1.14.0 (Ubuntu)
+	Has login and registration page
+	cyberswell:test:test@thenotebook.htb
+	
+10010/tcp filtered rxapi
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel

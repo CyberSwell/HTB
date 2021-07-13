@@ -1,0 +1,12 @@
+- Nikto v2.1.6/2.1.5
++ Target Host: knife.htb
++ Target Port: 80
++ GET Retrieved x-powered-by header: PHP/8.1.0-dev
++ GET The anti-clickjacking X-Frame-Options header is not present.
++ GET The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ GET The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ AQMWNCXZ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ GET The anti-clickjacking X-Frame-Options header is not present.
++ GET The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ GET The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ GET The site uses SSL and Expect-CT header is not present.

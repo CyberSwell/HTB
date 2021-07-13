@@ -1,0 +1,14 @@
+Port 22
+Port 8080
+	Online YAML parser
+	"Due to security reason this feature has been temporarily on hold. We will soon fix this issue!"
+
+Apache Tomcat/9.0.38
+
+/host-manager (Status: 302)
+/manager (Status: 302)
+	<user username="tomcat" password="s3cret" roles="manager-gui"/>/Servlet (Status: 200)
+/test (Status: 302)
+
+Used msfconsole (search yaml) # 3-7, no joy
+

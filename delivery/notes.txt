@@ -1,0 +1,47 @@
+Nmap: Ports 22, 80, 8065
+
+Port 80: Delivery homepage
+	There's a "helpdesk.delivery.htb"
+	Must get email before being able to access mattermost (port 8065)
+
+Port 8065: MatterMost Portal
+	Need valid email first (*.delivery.htb)
+
+helpdesk.delivery.htb
+	Add lab IP to /etc/hosts with hostname "helpdesk.delivery.htb" to access
+	Email address is [ticketNum]@delivery.htb
+	"Sign In" -> "I'm an agent": osTicket (new sign-in portal)
+		Password resets are disabled
+	Appears to allow attachments, CVE 2004-0613 (Attachment RCE?)
+	Ticket: email@email.com, 8602211/6267508, attached shell.php
+	Account created: jameswellzhang@yahoo.com, password (no confirmation email sent)
+	Account created: cyberswell@delivery.htb, password
+	Account created: cyberswell1@delivery.htb, Password1!
+
+	Ticket ID 7719335, "add more information, email 7719335@delivery.htb"
+	Ticket ID 8201820, test@test.com
+
+Mattermost:
+	Attempted creating account with cyberswell1 credentials
+		"resend email" to actual, accessible email but none in inbox.
+
+	Account created: cyberswell2, 7719335@delivery.htb, Password1!
+	Account created: 8201820@delivery.htb, cyberswell69, Password1!
+		**VALID CREDENTIALS. ABLE TO LOG IN**
+
+	From root: "Please update theme to the OSTicket before we go live. maildeliverer;Youve_G0t_Mail! (also password variants of "PleaseSubscribe!" - useful for cracking hashes??
+
+
+osTICKET:
+	Creds -> maildeliverer:Youve_G0t_Mail!
+
+SSH as maildeliverer@10.10.10.222:
+	/opt/maildeliverer/config.json -> mmuser:Crack_The_MM_Admin_PW@tcp(127.0.0.1:3306)	        
+	
+Plan:
+1.) Create ticket to obtain valid @delivery.htb email
+2.) Be able to access ticket information
+3.) Confirm MatterMost account
+4.) Explore MatterMost
+5.) 
+

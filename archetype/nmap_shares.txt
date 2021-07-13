@@ -1,0 +1,33 @@
+# Nmap 7.91 scan initiated Wed Apr 21 14:12:22 2021 as: nmap -T5 -v -o nmap_shares.txt --script smb-enum-shares --script-args smbuser=username,smbpass=password -p445 archetype.htb
+Nmap scan report for archetype.htb (10.10.10.27)
+Host is up (0.013s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Host script results:
+| smb-enum-shares: 
+|   account_used: username
+|   \\10.10.10.27\ADMIN$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Remote Admin
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.10.27\C$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Default share
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.10.27\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: Remote IPC
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\10.10.10.27\backups: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Anonymous access: READ
+|_    Current user access: READ
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Wed Apr 21 14:12:47 2021 -- 1 IP address (1 host up) scanned in 25.76 seconds

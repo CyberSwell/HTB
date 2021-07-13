@@ -1,0 +1,15 @@
+# Nmap 7.91 scan initiated Wed Jan 13 22:15:12 2021 as: nmap --script=ftp-anon -o nmap_script_ftp-anon 10.10.10.5
+Nmap scan report for 10.10.10.5
+Host is up (0.013s latency).
+Not shown: 998 filtered ports
+PORT   STATE SERVICE
+21/tcp open  ftp
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 03-18-17  01:06AM       <DIR>          aspnet_client
+| 01-14-21  01:10AM                 2949 ex.aspx
+| 03-17-17  04:37PM                  689 iisstart.htm
+| 01-14-21  12:30AM                 2910 shell.aspx
+|_03-17-17  04:37PM               184946 welcome.png
+80/tcp open  http
+
+# Nmap done at Wed Jan 13 22:15:17 2021 -- 1 IP address (1 host up) scanned in 4.94 seconds

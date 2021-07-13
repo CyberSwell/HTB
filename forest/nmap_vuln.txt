@@ -1,0 +1,36 @@
+# Nmap 7.91 scan initiated Thu Feb  4 19:52:49 2021 as: nmap -sV --script vuln -o nmap_vuln.txt forest.htb
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for forest.htb (10.10.10.161)
+Host is up (0.063s latency).
+Not shown: 989 closed ports
+PORT     STATE SERVICE      VERSION
+53/tcp   open  domain       Simple DNS Plus
+88/tcp   open  kerberos-sec Microsoft Windows Kerberos (server time: 2021-02-05 01:02:52Z)
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+389/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name)
+|_sslv2-drown: 
+445/tcp  open  microsoft-ds Microsoft Windows Server 2008 R2 - 2012 microsoft-ds (workgroup: HTB)
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_sslv2-drown: 
+3268/tcp open  ldap         Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name)
+|_sslv2-drown: 
+3269/tcp open  tcpwrapped
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_sslv2-drown: 
+Service Info: Host: FOREST; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb  4 19:54:02 2021 -- 1 IP address (1 host up) scanned in 72.86 seconds

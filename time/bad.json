@@ -1,0 +1,12 @@
+const jpv = require('jpv');
+
+const someJson = {
+	definitelyAnArray:{
+		sneakyStuff: "Don't tell anyone, but I'm not actually an array.",
+		constructor:[]constructor
+	}
+};
+const schema = {
+	definitelyAnArray:[]
+};
+
