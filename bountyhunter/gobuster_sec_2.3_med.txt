@@ -1,0 +1,5 @@
+/resources            (Status: 301) [Size: 324] [--> http://bountyhunter.htb/resources/]
+/assets               (Status: 301) [Size: 321] [--> http://bountyhunter.htb/assets/]
+/css                  (Status: 301) [Size: 318] [--> http://bountyhunter.htb/css/]
+/js                   (Status: 301) [Size: 317] [--> http://bountyhunter.htb/js/]
+/server-status        (Status: 403) [Size: 281]
