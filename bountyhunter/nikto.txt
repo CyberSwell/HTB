@@ -1,0 +1,20 @@
+- Nikto v2.1.6/2.1.5
++ Target Host: bountyhunter.htb
++ Target Port: 80
++ GET The anti-clickjacking X-Frame-Options header is not present.
++ GET The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ GET The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ EUPIMEGX Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-3093: GET /db.php: This might be interesting... has been seen in web logs from an unknown scanner.
+- Nikto v2.1.6/2.1.5
++ Target Host: bountyhunter.htb
++ Target Port: 80
++ GET The anti-clickjacking X-Frame-Options header is not present.
++ GET The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ GET The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ QOBRDMUC Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-3093: GET /db.php: This might be interesting... has been seen in web logs from an unknown scanner.
++ GET The anti-clickjacking X-Frame-Options header is not present.
++ GET The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ GET The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ GET The site uses SSL and Expect-CT header is not present.
