@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Fri Sep 17 20:49:35 2021 as: nmap -sU -o nmap_sU.txt explore.htb

@@ -1,0 +1,26 @@
+
+==================================================================
+|    ES File Explorer Open Port Vulnerability : CVE-2019-6447    |
+|                Coded By : Nehal a.k.a PwnerSec                 |
+==================================================================
+
+name : concept.jpg
+time : 4/21/21 02:38:08 AM
+location : /storage/emulated/0/DCIM/concept.jpg
+size : 135.33 KB (138,573 Bytes)
+
+name : anc.png
+time : 4/21/21 02:37:50 AM
+location : /storage/emulated/0/DCIM/anc.png
+size : 6.24 KB (6,392 Bytes)
+
+name : creds.jpg
+time : 4/21/21 02:38:18 AM
+location : /storage/emulated/0/DCIM/creds.jpg
+size : 1.14 MB (1,200,401 Bytes)
+
+name : 224_anc.png
+time : 4/21/21 02:37:21 AM
+location : /storage/emulated/0/DCIM/224_anc.png
+size : 124.88 KB (127,876 Bytes)
+

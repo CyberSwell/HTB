@@ -1,0 +1,9 @@
+
+==================================================================
+|    ES File Explorer Open Port Vulnerability : CVE-2019-6447    |
+|                Coded By : Nehal a.k.a PwnerSec                 |
+==================================================================
+
+name : VMware Virtual Platform
+ftpRoot : /sdcard
+ftpPort : 3721

@@ -1,0 +1,30 @@
+# Nmap 7.91 scan initiated Fri Sep 17 20:52:49 2021 as: nmap -p- -T5 -o nmap_p.txt explore.htb
+Warning: 10.10.10.247 giving up on port because retransmission cap hit (2).
+Nmap scan report for explore.htb (10.10.10.247)
+Host is up (0.014s latency).
+Not shown: 65513 closed ports
+PORT      STATE    SERVICE
+929/tcp   filtered unknown
+2222/tcp  open     EtherNetIP-1
+5555/tcp  filtered freeciv
+6811/tcp  filtered unknown
+9858/tcp  filtered unknown
+10718/tcp filtered unknown
+12565/tcp filtered unknown
+12687/tcp filtered unknown
+12850/tcp filtered unknown
+13013/tcp filtered unknown
+14785/tcp filtered unknown
+23635/tcp filtered unknown
+27231/tcp filtered unknown
+29516/tcp filtered unknown
+30710/tcp filtered unknown
+40455/tcp open     unknown
+42135/tcp open     unknown
+42406/tcp filtered unknown
+48242/tcp filtered unknown
+59777/tcp open     unknown
+60721/tcp filtered unknown
+65167/tcp filtered unknown
+
+# Nmap done at Fri Sep 17 20:53:20 2021 -- 1 IP address (1 host up) scanned in 31.14 seconds

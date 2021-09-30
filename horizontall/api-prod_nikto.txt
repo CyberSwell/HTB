@@ -1,0 +1,13 @@
+- Nikto v2.1.6/2.1.5
++ Target Host: api-prod.horizontall.htb
++ Target Port: 80
++ GET Retrieved x-powered-by header: Strapi <strapi.io>
++ GET The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ GET Retrieved access-control-allow-origin header: *
++ OPTIONS Allowed HTTP Methods: HEAD, GET 
++ OSVDB-3092: GET /admin/: This might be interesting...
++ OSVDB-3092: GET /Admin/: This might be interesting...
++ GET /admin/index.html: Admin login page/section found.
++ GET /admin/html: Tomcat Manager / Host Manager interface found (pass protected)
++ GET /admin/status: Tomcat Server Status interface found (pass protected)
++ GET /admin/sites/new: ComfortableMexicanSofa CMS Engine Admin Backend (pass protected)
