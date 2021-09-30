@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 # Nmap 7.91 scan initiated Fri Sep 17 14:04:39 2021 as: nmap -p- -o nmap_p.txt horizontall.htb
 Nmap scan report for horizontall.htb (10.10.11.105)
 Host is up (0.017s latency).
+=======
+# Nmap 7.91 scan initiated Thu Sep 30 14:20:57 2021 as: nmap -p- -o nmap_p.txt horizontall.htb
+Nmap scan report for horizontall.htb (10.10.11.105)
+Host is up (0.026s latency).
+>>>>>>> 345ff2ef8e1f2ae9783cb66ee576e753bec29f2f
 Not shown: 65533 closed ports
 PORT   STATE SERVICE
 22/tcp open  ssh
 80/tcp open  http
 
+<<<<<<< HEAD
 # Nmap done at Fri Sep 17 14:04:55 2021 -- 1 IP address (1 host up) scanned in 16.16 seconds
+=======
+# Nmap done at Thu Sep 30 14:21:06 2021 -- 1 IP address (1 host up) scanned in 8.68 seconds
+>>>>>>> 345ff2ef8e1f2ae9783cb66ee576e753bec29f2f

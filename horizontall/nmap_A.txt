@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 # Nmap 7.91 scan initiated Fri Sep 17 14:09:51 2021 as: nmap -A -p 22,80 -o nmap_A.txt horizontall.htb
 Nmap scan report for horizontall.htb (10.10.11.105)
 Host is up (0.016s latency).
 
+=======
+# Nmap 7.91 scan initiated Thu Sep 30 14:21:19 2021 as: nmap -A -o nmap_A.txt horizontall.htb
+Nmap scan report for horizontall.htb (10.10.11.105)
+Host is up (0.024s latency).
+Not shown: 998 closed ports
+>>>>>>> 345ff2ef8e1f2ae9783cb66ee576e753bec29f2f
 PORT   STATE SERVICE VERSION
 22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
 | ssh-hostkey: 
@@ -14,4 +21,8 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+<<<<<<< HEAD
 # Nmap done at Fri Sep 17 14:09:59 2021 -- 1 IP address (1 host up) scanned in 7.66 seconds
+=======
+# Nmap done at Thu Sep 30 14:21:27 2021 -- 1 IP address (1 host up) scanned in 8.07 seconds
+>>>>>>> 345ff2ef8e1f2ae9783cb66ee576e753bec29f2f
