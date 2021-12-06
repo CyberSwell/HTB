@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Thu Dec  2 19:24:55 2021 as: nmap -sV -T5 -o nmap_sV.txt backdoor.htb
+Nmap scan report for backdoor.htb (10.10.11.125)
+Host is up (0.025s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec  2 19:25:08 2021 -- 1 IP address (1 host up) scanned in 13.54 seconds
