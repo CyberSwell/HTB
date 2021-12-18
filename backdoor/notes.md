@@ -9,7 +9,14 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 
 # Wordpress:
+- Directory listing! Enum plugins and themes
 - XMLRPC present but not working
-- Gravatar plugin?
-- Akismet plugin?
-- twentyseventeen 2.8 theme? 
+**/plugins:**
+- ebookdownload
+  - Version 1.1?
+  - https://www.exploit-db.com/exploits/39575
+  - wp-config.php
+    - MySQL creds: wordpressuser:MQYBJSaD#DxG6qbm
+    - DB on localhost
+  - /etc/passwd:
+    - User "user" has a home directory? 
