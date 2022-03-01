@@ -1,0 +1,9 @@
+# Nmap 7.92 scan initiated Mon Dec  6 19:24:48 2021 as: nmap -sV -T5 -p 1337 -o nmap_sV_1337 backdoor.htb
+Nmap scan report for backdoor.htb (10.10.11.125)
+Host is up (0.024s latency).
+
+PORT     STATE SERVICE VERSION
+1337/tcp open  waste?
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec  6 19:25:06 2021 -- 1 IP address (1 host up) scanned in 17.68 seconds

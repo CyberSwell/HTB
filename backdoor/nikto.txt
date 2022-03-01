@@ -1,0 +1,4 @@
+- Nikto v2.1.6/2.1.5
++ No web server found on backdoor.htb:80
+- Nikto v2.1.6/2.1.5
++ No web server found on backdoor.htb:80
