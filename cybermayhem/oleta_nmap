@@ -1,0 +1,1 @@
+# Nmap 7.92 scan initiated Wed Mar  2 18:38:22 2022 as: nmap -p- -T5 -o oleta_nmap 10.10.110.101

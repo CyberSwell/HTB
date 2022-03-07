@@ -1,0 +1,41 @@
+# Nmap 7.92 scan initiated Wed Mar  2 18:48:29 2022 as: nmap -sV -T5 -p8080 -o e_oleta_sV.txt e-oleta
+Nmap scan report for e-oleta (10.10.110.101)
+Host is up (0.11s latency).
+
+PORT     STATE SERVICE    VERSION
+8080/tcp open  http-proxy Kestrel
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.92%I=7%D=3/2%Time=62200254%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,8C,"HTTP/1\.1\x20303\x20See\x20Other\r\nConnection:\x20close\r\
+SF:nDate:\x20Wed,\x2002\x20Mar\x202022\x2023:48:35\x20GMT\r\nContent-Type:
+SF:\x20text/html\r\nServer:\x20Kestrel\r\nLocation:\x20/app\r\n\r\n")%r(HT
+SF:TPOptions,8C,"HTTP/1\.1\x20303\x20See\x20Other\r\nConnection:\x20close\
+SF:r\nDate:\x20Wed,\x2002\x20Mar\x202022\x2023:48:35\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nServer:\x20Kestrel\r\nLocation:\x20/app\r\n\r\n")%r(
+SF:RTSPRequest,87,"HTTP/1\.1\x20505\x20HTTP\x20Version\x20Not\x20Supported
+SF:\r\nConnection:\x20close\r\nDate:\x20Wed,\x2002\x20Mar\x202022\x2023:48
+SF::36\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\n\r\n")%r(Fo
+SF:urOhFourRequest,345,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x2
+SF:0close\r\nDate:\x20Wed,\x2002\x20Mar\x202022\x2023:48:36\x20GMT\r\nCont
+SF:ent-Type:\x20application/json;\x20charset=utf-8\r\nServer:\x20Kestrel\r
+SF:\nContent-Security-Policy:\x20default-src\x20'none';\x20connect-src\x20
+SF:https://capture\.trackjs\.com\x20'self';\x20font-src\x20'self';\x20img-
+SF:src\x20data:\x20https://usage\.trackjs\.com\x20https://www\.gravatar\.c
+SF:om\x20'self';\x20script-src\x20eval:\x20inline:\x20https://capture\.tra
+SF:ckjs\.com\x20'self'\x20'unsafe-eval'\x20'unsafe-inline';\x20style-src\x
+SF:20inline:\x20'self'\x20'unsafe-inline';\x20worker-src\x20'self';\x20blo
+SF:ck-all-mixed-content;\x20sandbox\x20allow-same-origin\x20allow-scripts\
+SF:x20allow-forms\x20allow-popups\x20allow-modals\x20allow-downloads;\r\nO
+SF:ctopus-Node:\x20name=e33f5caae6ce;\x20version=2020\.3\.1\r\nReferrer-Po
+SF:licy:\x20no-referrer\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-O
+SF:ptions:\x20DENY\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n{\n\x20
+SF:\x20\"ErrorMessage\":\x20\"The\x20resource\x20you\x20requested\x20was\x
+SF:20not\x20found\.\"\n}")%r(Socks5,78,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nConnection:\x20close\r\nDate:\x20Wed,\x2002\x20Mar\x202022\x2023:48
+SF::36\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\n\r\n")%r(Ge
+SF:nericLines,78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clo
+SF:se\r\nDate:\x20Wed,\x2002\x20Mar\x202022\x2023:48:41\x20GMT\r\nServer:\
+SF:x20Kestrel\r\nContent-Length:\x200\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Mar  2 18:50:08 2022 -- 1 IP address (1 host up) scanned in 98.49 seconds
